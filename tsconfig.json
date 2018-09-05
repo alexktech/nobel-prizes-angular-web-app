@@ -1,5 +1,6 @@
 {
-  "compileOnSave": false,
+  "compileOnSave": true,
+  "exclude": [ "node_modules" ],
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -16,6 +17,22 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    /*
+    Enabling the strict flag enables all strict type checking options:
+      --alwaysStrict,
+      --noImplicitAny,
+      --noImplicitThis,
+      --strictFunctionTypes
+      --strictNullChecks,
+      --strictPropertyInitialization.
+    */
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "listEmittedFiles": true,
+    "listFiles": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true
   }
 }
