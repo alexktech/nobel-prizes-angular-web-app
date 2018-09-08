@@ -1,3 +1,27 @@
-<p>
-  laureates works!
-</p>
+<table mat-table [dataSource]="laureates">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let laureate"> {{laureate.firstname}} {{laureate.surname}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nationality">
+    <th mat-header-cell *matHeaderCellDef>Nationality</th>
+    <td mat-cell *matCellDef="let laureate"> {{laureate.bornCountry}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="gender">
+    <th mat-header-cell *matHeaderCellDef>Gender</th>
+    <td mat-cell *matCellDef="let laureate"> {{laureate.gender}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="prizes">
+    <th mat-header-cell *matHeaderCellDef>Prizes Won</th>
+    <td mat-cell *matCellDef="let laureate"> {{laureate.prizes.length}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+
+</table>
+
