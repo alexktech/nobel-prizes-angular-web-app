@@ -10,7 +10,9 @@ import { AppMaterialModule } from './app-material.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LaureatesComponent } from './laureates/laureates.component';
 import { PrizesComponent } from './prizes/prizes.component';
+
 import { LaureateHttpService } from './laureates/laureate-http.service';
+import { PrizeHttpService } from './prizes/prize-http.service';
 
 
 @NgModule({
@@ -28,7 +30,7 @@ import { LaureateHttpService } from './laureates/laureate-http.service';
     AppRoutingModule,
     AppMaterialModule
   ],
-  providers: [LaureateHttpService],
+  providers: [LaureateHttpService, PrizeHttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
