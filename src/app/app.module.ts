@@ -5,13 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LaureatesComponent } from './laureates/laureates.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LaureatesComponent
   ],
   imports: [
     BrowserModule,
