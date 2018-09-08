@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -8,8 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app-material.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LaureatesComponent } from './laureates/laureates.component';
+import { PrizesComponent } from './prizes/prizes.component';
 import { LaureateHttpService } from './laureates/laureate-http.service';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    LaureatesComponent
+    LaureatesComponent,
+    PrizesComponent
   ],
   imports: [
     BrowserModule,
